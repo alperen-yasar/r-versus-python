@@ -5,34 +5,39 @@ output:
     keep_md: yes
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+# A comparison of data visualisation on Python and R
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-
-```{r}
+```{r include = FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(reticulate)
-
-plot(iris)
-```
-```{r}
-summary(iris)
+data(iris)
 ```
 
+```{r warning=FALSE, message=FALSE}
+library(ggplot2)
 
-
-```{r}
 scatter <- ggplot(data=iris, aes(x = Sepal.Length, y = Sepal.Width)) 
-scatter + geom_point(aes(color=Species, shape=Species)) +
+scatter + geom_point(aes(color=Species, shape=Species), size=2) +
   xlab("Sepal Length") +  ylab("Sepal Width") +
-  ggtitle("Sepal Length-Width")
+  ggtitle("A gglot2 Scatterplot")
 
 ```
 
 
 
+```{python message=FALSE, warning=FALSE}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-```{python}
+iris_pd = r.iris
+
+ax = sns.scatterplot(x='Sepal.Length', y='Sepal.Width', data=iris_pd, hue="Species", style="Species")
+ax.set_title("A Seaborn Scatterplot")
+```
+
+```{r}
+
 
 ```
 
