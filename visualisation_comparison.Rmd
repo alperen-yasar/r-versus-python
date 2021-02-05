@@ -1,0 +1,38 @@
+---
+title: "A Comparison of Data Visualisation"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(tidyverse)
+library(reticulate)
+
+plot(iris)
+```
+```{r}
+summary(iris)
+```
+
+
+
+```{r}
+scatter <- ggplot(data=iris, aes(x = Sepal.Length, y = Sepal.Width)) 
+scatter + geom_point(aes(color=Species, shape=Species)) +
+  xlab("Sepal Length") +  ylab("Sepal Width") +
+  ggtitle("Sepal Length-Width")
+
+```
+
+
+
+
+```{python}
+
+```
+
