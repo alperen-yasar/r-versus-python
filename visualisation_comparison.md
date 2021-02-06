@@ -2,10 +2,17 @@
 title: "A Comparison of Data Visualisation"
 output: 
   html_document: 
+    code_folding: hide
     keep_md: yes
+    preserve_yaml: false
 ---
 
 # A comparison of data visualisation on Python and R
+
+In this notebook, I'll show different plot options in both Python and R to show you the basic differences in both coding and plotting. 
+
+
+
 
 
 
@@ -14,13 +21,12 @@ output:
 library(ggplot2)
 
 scatter <- ggplot(data=iris, aes(x = Sepal.Length, y = Sepal.Width)) 
-scatter + geom_point(aes(color=Species, shape=Species), size=2) +
+scatter + geom_point(aes(color=Species, shape=Species), size=3) +
   xlab("Sepal Length") +  ylab("Sepal Width") +
   ggtitle("A gglot2 Scatterplot")
 ```
 
-![](visualisation_comparison_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
-
+![](visualisation_comparison_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 
 
@@ -35,7 +41,6 @@ ax = sns.scatterplot(x='Sepal.Length', y='Sepal.Width', data=iris_pd, hue="Speci
 ax.set_title("A Seaborn Scatterplot")
 ```
 
-<img src="visualisation_comparison_files/figure-html/unnamed-chunk-3-1.png" width="672" />
-
+<img src="visualisation_comparison_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
 

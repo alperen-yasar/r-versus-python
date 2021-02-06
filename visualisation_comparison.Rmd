@@ -2,8 +2,9 @@
 title: "A Comparison of Data Visualisation"
 output: 
   html_document: 
+    code_folding: hide
     keep_md: yes
-        preserve_yaml: false
+    preserve_yaml: false
 ---
 
 # A comparison of data visualisation on Python and R
@@ -12,9 +13,14 @@ In this notebook, I'll show different plot options in both Python and R to show 
 
 ```{r include = FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
-library(reticulate)
 data(iris)
 ```
+
+```{r include = FALSE, warning=FALSE, message=FALSE}
+library(reticulate)
+use_python("/usr/local/bin/python")
+```
+
 
 ```{r message=FALSE, warning=FALSE}
 library(ggplot2)
@@ -27,8 +33,7 @@ scatter + geom_point(aes(color=Species, shape=Species), size=3) +
 ```
 
 
-
-```{python message=FALSE, warning=FALSE}
+```{python warning=FALSE}
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -39,8 +44,4 @@ ax = sns.scatterplot(x='Sepal.Length', y='Sepal.Width', data=iris_pd, hue="Speci
 ax.set_title("A Seaborn Scatterplot")
 ```
 
-```{r}
-
-
-```
 
