@@ -2,5 +2,6 @@
 
 
 
-[Data Visualisation Comparison](visualisation_comparison.md)
-[Data manipulation Comparison](manipulation_comparison.md)
+
+1. [Data Visualisation Comparison](visualisation_comparison.md)
+2. [Data manipulation Comparison](manipulation_comparison.md) # Not active yet.
