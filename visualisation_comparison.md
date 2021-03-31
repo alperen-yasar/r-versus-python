@@ -20,7 +20,7 @@ To explain basic differences simply, I'll explain libraries in one by comparison
 
 The reason I'm using this system is, matplotlib is almost at the same level of complexity as native R. It doesn't mean matplotlib is weak, it's just due to R is more suitable for plotting. On the other hand, Seaborn is built on top of matplotlib which provides more beautiful and versatile plots while ggplot is all about giving a user more options. 
 
-## Matplotlib vs Base R Plotting Capabilities.
+## Seaborn vs ggplot2 Plotting Capabilities.
 
 
 
